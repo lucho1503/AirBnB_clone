@@ -12,6 +12,7 @@ we create this interpreter with a specific use is which to manage data that we h
 create the file `./console.py` we import the **cmd** module that is used to build custom command interpreters using methods to build that interpreter
 you execute the file and it will show us the interpreter of commands ready to be used.
 
+
 ## Command list
 
 We will show a list of commands that were used in this project from which you can use:
@@ -26,9 +27,11 @@ We will show a list of commands that were used in this project from which you ca
 
 the commands that stop in the list are the ones that the interpreter recognizes and executed but for some reason executes a command that is not in thelist the program detects it as an error.
 
-if the line of the interpreter this empty the program will continue working correctly, also if we want to return to execute the previous command with the arrow up we return the command 
 
-### AUTHOR
+if the line of the interpreter this empty the program will continue working correctly, also if we want to return to execute the previous command with
+the arrow up we return the command.
+
+## AUTHOR
 
 Deiby Ocampo <968@holbertonschool.com>
 
