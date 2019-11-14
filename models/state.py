@@ -2,6 +2,6 @@
 from models.base_model import BaseModel
 
 
-class State:
+class State(BaseModel):
     """ class State """
     name = ""

@@ -2,6 +2,6 @@
 from models.base_model import BaseModel
 
 
-class Amenty:
+class Amenty(BaseModel):
     """ class Amenty """
     name = ""
