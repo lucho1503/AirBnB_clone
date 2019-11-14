@@ -1,8 +1,14 @@
 #!/usr/bin/python3
+"""
+console - this console contains the entry point
+"""
+
 import cmd
 from models.base_model import BaseModel
 
+
 class HBNBCommand(cmd.Cmd):
+    """ class HBNBCommand """
     prompt = "(hbnb) "
 
     def do_create(self, args):
@@ -15,17 +21,21 @@ class HBNBCommand(cmd.Cmd):
             create.save()
             print(create.id)
 
-    def do_show(self, args):
-
-
-    def do_EOF(self):
-        """ in proccess """
+    def help_create(self, args):
         pass
+
+    def do_EOF(self, line):
+        """ Quit command to exit the program\n """
+        return True
+        do_EOF = do_quit
+
+    def help_quit(self, args):
+        print("quit command exit")
 
     def do_quit(self, args):
         """Quit command to exit the program
         """
-        return True 
+        return True
 
     def emptyline(self):
         pass
