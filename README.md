@@ -32,4 +32,4 @@ if the line of the interpreter this empty the program will continue working corr
 
 Deiby Ocampo <968@holbertonschool.com>
 
-Luis Cano <963@holbertonschool.com>
+Luis Moreno <963@holbertonschool.com>
