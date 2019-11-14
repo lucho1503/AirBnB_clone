@@ -1,36 +1,44 @@
 #!usr/bin/python3
-
+"""
+class FileStorage - this class serializate and deserializate JSON and instances
+"""
 import json
-import models
+import os
 from models.base_model import BaseModel
-from datetime import datetime
+from models.User import User
+
+dictionary = {'BaseModel': BaseModel, 'User': User}
 
 
 class FileStorage:
-
-    __file_path = 'file.json'
+    """ class FileStorage """
+    __file_path = "file.json"
     __objects = {}
 
     def all(self):
+        """ returns a dictionary of __objects """
         return self.__objects
 
     def new(self, obj):
-        key = "{}.{}".format(obj.__class__.__name__, obj.id)
-        self.__objects[key] = obj
+        """ sets the obj with key <obj class id> """
+        id_obj = obj.__class__.__name__ + "." + obj.id
+        self.__objects[id_obj] = obj
 
     def save(self):
-        temp = {}
+        """ serializate __objects in the JSON file """
+        dictt = {}
         for key, value in self.__objects.items():
-            temp[key] = value.to_dict()
-        with open(self.__file_path, 'w', encoding='utf-8') as f:
-            json.dump(temp, f)
+            if not value:
+                pass
+            else:
+                dictt[key] = value.to_dict()
+
+        with open(self.__file_path, 'w') as f:
+            json.dump(dictt, f)
 
     def reload(self):
-        #re_dict = {}
-        try:
-            with open(self.__file_path, encoding='utf-8') as f:
-                self.__objects = json.load(f)
-                for key, value in self.__object.items():
-                    self.new(self.__objects[value['__class__']](**value))
-        except:
-            pass
+        """ deserializate the JSON file in __objects """
+        is os.path.exists(self.__file_path) is True:
+            with open(self.__file_path, 'r') as f:
+                for key, value in json.load(f).items():
+                    self.new(dictionary[value['__class__']](**value))
