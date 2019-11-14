@@ -4,10 +4,9 @@ class base - this class defines all common attributes/methods for other classes
 """
 
 import uuid
-from models import datetime
 from datetime import datetime
-
-
+#from models import storage
+import models
 class BaseModel:
     """ Class Base Model """
     def __init__(self, *args, **kwargs):
@@ -23,7 +22,7 @@ class BaseModel:
             self.id = str(uuid.uuid4())
             self.created_at = datetime.now()
             self.updated_at = self.created_at
-            storage.new(self)
+            models.storage.new(self)
 
     def __str__(self):
         """ print [class name] (id) (__dict__) """
@@ -35,7 +34,7 @@ class BaseModel:
     def save(self):
         """ update with the current datetime """
         self.updated_at = datetime.now()
-        storage.save()
+        models.storage.save()
 
     def to_dict(self):
         """ returns a dictionary of a instance """
