@@ -33,4 +33,4 @@ the arrow up we return the command.
 
 Deiby Ocampo <968@holbertonschool.com>
 
-Luis Cano <963@holbertonschool.com>
+Luis Moreno <963@holbertonschool.com>
