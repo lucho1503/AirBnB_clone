@@ -5,8 +5,9 @@ class base - this class defines all common attributes/methods for other classes
 
 import uuid
 from datetime import datetime
-#from models import storage
 import models
+
+
 class BaseModel:
     """ Class Base Model """
     def __init__(self, *args, **kwargs):
