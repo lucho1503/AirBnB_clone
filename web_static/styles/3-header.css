@@ -1,0 +1,23 @@
+header {
+<<<<<<< HEAD
+    background : white url("../images/logo_hbnb.png");
+    background-repeat: no-repeat;
+    background-position:20px center;
+    height: 70px;
+    width: 100%;
+    border-bottom: 1px #CCCCCC;
+}
+=======
+  color: white;
+  height: 70px;
+  width: 100%;
+  border-bottom: 1px #CCCCCC solid;
+}
+
+.logo {
+  margin-left: 20px;
+  height: 100%;
+  background: url(../images/logo.png);
+  background-repeat: no-repeat;
+}
+>>>>>>> 462a3223e44b9f750fdced6a81e53cf8c89de826
