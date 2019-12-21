@@ -1,22 +1,11 @@
 footer {
-<<<<<<< HEAD
     background-color: white;
     height: 60px;
     width: 100%;
-    border-top: 1px #CCCCCC;
-    position: absolute;
-    aling-items: center;
-    display: flex;
-    justify-content: center;
+    border-top: 1px #CCCCCC solid;
+    position: fixed;
+    display: table;
     bottom: 0;
-}
-=======
-  color: white;
-  position: absolute;
-  bottom: 0;
-  height: 60px;
-  width: 100%;
-  border-top: 1px #CCCCCC solid;
 }
 
 P {
@@ -24,4 +13,4 @@ P {
   padding: 5px;
   text-align: center;
 }  
->>>>>>> 462a3223e44b9f750fdced6a81e53cf8c89de826
+

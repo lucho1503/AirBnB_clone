@@ -49,3 +49,45 @@ button:hover {
     margin-top: 0px;
     color: black;
 }
+
+.dropdown {
+    position: relative;
+}
+
+ul.city {
+    list-style-type: none;
+}
+
+.popover {
+    width: 104%;
+    height: 65%;
+    background: #FAFAFA;
+    border: 1px #DDDDDD solid;
+    border-radius: 4px;
+    color: black;
+    position: absolute;
+    margin-top: 0px;
+    left: -21%;
+    list-style-type: none;
+    visibility: hidden;
+}
+
+.amenities ul.popover {
+    left: -45%;
+    width: 200%;
+    position: absolute;
+    height: 650%;
+    color: black;
+}
+
+li.info {
+    padding-top: 30px;
+}
+
+.locations:hover .popover {
+    visibility: visible;
+}
+
+.amenities:hover .popover {
+    visibility: visible;
+}
